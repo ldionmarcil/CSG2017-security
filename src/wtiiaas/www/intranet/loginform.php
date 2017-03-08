@@ -1,3 +1,13 @@
+<!-- Changelog
+
+2013/03/02
+Initial file
+shore.christia@wtiiaas.csg
+
+2014/12/28
+Imported security
+shore.christia@wtiiaas.csg
+-->
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
