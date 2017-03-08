@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER Louis Dion-Marcil <ldionmarcil@riseup.net>
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 php libapache2-mod-php python-setuptools vim-tiny php-mysql sudo wget iputils-ping nmap cron
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 php libapache2-mod-php python-setuptools vim-tiny php-mysql sudo wget iputils-ping nmap cron xvfb phantomjs
 
 
 # Hack to get SSL working

