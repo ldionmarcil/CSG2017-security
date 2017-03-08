@@ -71,7 +71,7 @@ One of the ways to get to the intranet
     
 * Todos
 ** TODO Make mysql start automatically
-** TODO Fix images in team (CFO/CTO)
+** TBD Fix images in team (CFO/CTO)
 ** TODO Make API documentation in HTML
 ** TBD Make employees.php page
 ** DONE Index a database dump [identitygenerator.py] → 
@@ -96,6 +96,7 @@ One of the ways to get to the intranet
 ** DONE Make app use dedicated SQL user (nonroot)
    CLOSED: [2017-03-02 Thu 00:47]
 ** TODO Fix Dockerfile
+** TODO Make webserver non www-data read-ONLY
 ** TODO Modify root password from ENV variable that will be set when container is RUN
 * Notes
 ** PhantomJS
