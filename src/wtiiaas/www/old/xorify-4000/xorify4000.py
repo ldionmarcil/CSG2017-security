@@ -3,8 +3,7 @@ import string
 import itertools
 
 key = "VivaLaCraptography"
-data = """Email: zana.elbert@wtiiaas.csg
-Password: FallOutBoyzForever1121"""
+data = "***INSERT SECRET HERE***"
 
 
 def make_magic(number):
