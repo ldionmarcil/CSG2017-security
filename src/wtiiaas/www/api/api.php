@@ -44,7 +44,7 @@ if (isset($query) && !empty($query)) {
       case 'getTimeWithFormat':
         // demo user      
         if ($client_id === 1) {
-          echo "<error>This is a premium feature! If only there was a way to obtain a premium API key…</error>";
+          echo "<error>This is a premium feature! If only there was a way to obtain a premium API key...</error>";
           die();
         }
         $format = xml_attribute($action,"format");
