@@ -40,7 +40,6 @@ confirm_auth();
     </style>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="row content">
         <div class="col-sm-3 sidenav">
@@ -74,7 +73,7 @@ confirm_auth();
             <div class="row">
               <div style="padding-left:100px;" class="col-sm-10">
                 <h4>Harden Jane, <b>CEO</b>  <small>Feb 22, 2017</small></h4>
-                <p>Thank you so much everyone for the warm welcome. As a new CEO, I want you all to know that I am always there to hear your you out. <span style="font-size:20px;font-weight:bold;">I promise that I will open and read every single message that you send me through the Intranet messaging system within 15 seconds of it being received</span>.</p>
+                <p>Thank you so much everyone for the warm welcome. As a new CEO, I want you all to know that I am always there to hear your you out. <span style="font-size:20px;font-weight:bold;">I promise that I will open and read every single message that you send me through the Intranet messaging system within <i><u>one minute</u></i> of it being received</span>.</p>
                 <br>
               </div>
             </div>

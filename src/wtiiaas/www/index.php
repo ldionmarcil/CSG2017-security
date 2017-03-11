@@ -49,13 +49,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="/team/">The Team</a>
+              <a href="/">Home</a>
             </li>
           </ul>
         </div>
@@ -78,9 +72,6 @@
               <hr class="intro-divider">
               <ul class="list-inline intro-social-buttons">
                 <li>
-                  <a href="/team/" class="btn btn-default btn-lg"><i class="fa fa-users fa-fw"></i> <span class="network-name">Our Officers</span></a>
-                </li>
-                <li>
                   <a href="/product/" class="btn btn-default btn-lg"><i class="fa fa-check-square-o fa-fw"></i> <span class="network-name">Try it before buying!</span></a>
                 </li>
                 <li>
@@ -100,7 +91,30 @@
     <!-- Page Content -->
 
     <a  name="services"></a>
+
     <div class="content-section-a">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Insanely secure</h2>
+            <p class="lead">At WTIIAAS, we take security very seriously. Your payment information is $100% secure with ROT and XOR technology. As a result, we are proud to say that we only have been hacked once, but only employee details were compromised, all clients ended up safe! We are now hacker proof and intend to stay this way! Feel free to trust us completely.</p>
+          </div>
+          <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+            <img class="img-responsive" src="img/c.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    
+    <div class="content-section-b">
 
       <div class="container">
         <div class="row">
@@ -111,7 +125,7 @@
             <p class="lead">We specialize in making <i>time</i> more accessible. This is why we built WTIIAAS — A service where billions of users can query our servers in order to tell what time it currently is. We offer an API that your program can use in order to obtain the current time.</p>
           </div>
           <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/ipad.png" alt="">
+            <img class="img-responsive" src="img/a.png" alt="">
           </div>
         </div>
 
@@ -121,7 +135,7 @@
     </div>
     <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+    <div class="content-section-a">
 
       <div class="container">
 
@@ -129,11 +143,11 @@
           <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
-            <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-            <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+            <h2 class="section-heading">Free version<br>For poor people</h2>
+            <p class="lead">Can't afford our premium version? Don't worry. We're charitable and understand the fact that some people are poor. If you can't afford our premium version, you can still use our some functionnality from our API which will allow you to access the current time on a budget!</p>
           </div>
           <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-            <img class="img-responsive" src="img/dog.png" alt="">
+            <img class="img-responsive" src="img/b.png" alt="">
           </div>
         </div>
 
@@ -141,29 +155,6 @@
       <!-- /.container -->
 
     </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-            <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-          </div>
-          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/phones.png" alt="">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
 
     <a  name="contact"></a>
     <div class="banner">

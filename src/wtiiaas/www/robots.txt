@@ -1,2 +1,2 @@
 Disallow: /intranet/
-Disallow: /mail/
+Disallow: /old/

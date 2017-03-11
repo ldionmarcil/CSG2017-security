@@ -21,7 +21,7 @@ if (isset($query) && !empty($query)) {
   //authenticate
   $key_guid = $xml->identity->key;
   if (isset($key_guid)) {
-    if (false === ($client_id = authenticate($key_guid->__toString()))) {
+    if (false === ($client_id = authenticate_api($key_guid->__toString()))) {
       die("<error>
   <identity>
     <key>".$key_guid."</key>

@@ -1,9 +1,10 @@
 <?php
 include_once '../utils/utils.php';
 
-$db->where('client_id',1); // demo client
+$api_db = new Mysqlidb ('localhost', 'api', 'e9Cp0URepROiCckO', 'api');
+$api_db->where('client_id',1); // demo client
 
-$demo_guid = $db->getValue('apikeys','key_guid');
+$demo_guid = $api_db->getValue('apikeys','key_guid');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,13 +90,7 @@ $demo_guid = $db->getValue('apikeys','key_guid');
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="/team/">The Team</a>
+              <a href="/">Home</a>
             </li>
           </ul>
         </div>
@@ -110,10 +105,52 @@ $demo_guid = $db->getValue('apikeys','key_guid');
     <div style="padding-top:60px;" class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">Try the product first
-            <small>We won't even bill you!</small>
-          </h1>
+          <h1 class="page-header">Try the product first <small>We won't even bill you!</small></h1>
         </div>
+        <center>
+          <table>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Block</th>
+                  <th>Plan $</th>
+                  <th><code>action</code> attribute</th>
+                  <th>Other attributes</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>identity</code></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>API key goes inside a <code>&lt;key&gt;&lt;/key&gt;</code> block</td>
+                </tr>
+                <tr>
+                  <td><code>query</code></td>
+                  <td>-</td>
+                  <td><code>help</code></td>
+                  <td>-</td>
+                  <td>Shows some samples of queries our API can understand</td>
+                </tr>
+                <tr>
+                  <td><code>query</code></td>
+                  <td>Free</td>
+                  <td><code>getTime</code></td>
+                  <td>-</td>
+                  <td>Returns the current time</td>
+                </tr>
+                <tr>
+                  <td><code>query</code></td>
+                  <td>Premium</td>
+                  <td><code>getTimeWithFormat</code></td>
+                  <td><code>format="%m-%d-%y"</code></td>
+                  <td>Get the time with a custom format</td>
+                </tr>
+              </tbody>
+            </table>
+        </center>
       </div>
       <div id="query">
         
@@ -128,18 +165,14 @@ $demo_guid = $db->getValue('apikeys','key_guid');
   </query>
 </WTIIaaS>
         </textarea>
-        
-        <button id="query-button" type=button>Query API</button>
-        
       </div>
-
-      
       <div id="response">
         <textarea id="response-value" rows="10" style="width:100%" readonly>
         </textarea>
       </div>
 
-      
+      <center><button id="query-button" type=button>Query API</button></center>
+      <br />
     </div>
 
     <!-- Footer -->

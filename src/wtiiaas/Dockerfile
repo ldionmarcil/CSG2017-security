@@ -35,9 +35,24 @@ RUN chown -R www-data:www-data /var/www/
 # Package sysadmin user
 adduser --disabled-password --gecos '' sysadmin
 COPY ./files/.bash_history /home/sysadmin/.bash_history
-COPY ./files/banking.txt.pgp /home/sysadmin/banking.txt.pgp
 RUN chown -R sysadmin:sysadmin /home/sysadmin/
 RUN chmod 600 /home/sysadmin/.bash_history
+RUN chmod 600 /home/sysadmin/banking.txt.pgp
+# Sysadmin crontab
+COPY ./files/sysadmin_crontab /var/spool/cron/crontabs/sysadmin
+RUN chmod 600 /var/spool/cron/crontabs/sysadmin
+RUN chown sysadmin:crontab /var/spool/cron/crontabs/sysadmin
+COPY ./scripts/deletetmp.sh /home/sysadmin/deletetmp.sh
+RUN chown sysadmin:sysadmin /home/sysadmin/deletetmp.sh
+RUN chmod 744 /home/sysadmin/deletetmp.sh
+
+
+# Setup XSS bot
+COPY ./scripts/xss.js /root/xss.js
+RUN chmod 700 /root/xss.js
+COPY ./files/xss_crontab /var/spool/cron/crontabs/root
+RUN chmod 600 /var/spool/cron/crontabs/root
+RUN chown root:crontab /var/spool/cron/crontabs/root
 
 
 # Start main execution loop

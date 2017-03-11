@@ -3,15 +3,17 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+//load supercool-waf3000
+include_once 'supercool-waf3000.php';
+
 // load database utils
 include_once 'db.php';
 include_once 'logging.php';
 
 $db = new Mysqlidb ('localhost', 'wtiiaas', 'WYqmw6t9RN7NCl9U', 'wtiiaas');
 
-function authenticate($key_guid) {
-  $db = MysqliDb::getInstance();
-
+function authenticate_api($key_guid) {
+  $db = new Mysqlidb ('localhost', 'api', 'e9Cp0URepROiCckO', 'api');
   $db->where('key_guid = \''.$key_guid.'\'');
   $key = $db->getOne('apikeys', null, array('client_id', 'key_guid'));
   if (!empty($key)) {

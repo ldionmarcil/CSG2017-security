@@ -1,9 +1,5 @@
 <?php
 include_once '../utils/utils.php';
-
-$db->where('client_id',1); // demo client
-
-$demo_guid = $db->getValue('apikeys','key_guid');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,13 +61,7 @@ $demo_guid = $db->getValue('apikeys','key_guid');
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="/team/">The Team</a>
+              <a href="/">Home</a>
             </li>
           </ul>
         </div>
@@ -91,7 +81,9 @@ $demo_guid = $db->getValue('apikeys','key_guid');
           </h1>
         </div>
       </div>
-      <h4>To request a quote, please email shore.christia@wtiiaas.csg. She will make sure to assist your business needs.</h4>
+      <h4>To request a quote, please email <i><u>shore.christia@wtiiaas.csg</u></i>. She will make sure to assist your business needs.</h4>
+      <br />
+      <br />
     </div>
 
     <!-- Footer -->
