@@ -30,5 +30,5 @@ page.open(url, 'POST', postData, function(status) {
     console.log("[INFO] rendered page");
     setTimeout(function(){
         phantom.exit();
-    }, 1);
+    }, 7000);
 });
