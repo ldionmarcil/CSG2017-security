@@ -74,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form action="compose.php" method="POST">
           <div class="col-md-9">
             <h1>Messaging <?php
-                              if (isset($post) && $error) { ?><span class="label label-danger">Error sending message</span></h1>
-            <?php } elseif(isset($post) && !$error) {?><span class="label label-success">Message sent!</span></h1><?php } ?>
+                              if (isset($post) && isset($error) && $error) { ?><span class="label label-danger">Error sending message</span></h1>
+            <?php } elseif(isset($post) && isset($error) && !$error) {?><span class="label label-success">Message sent!</span></h1><?php } ?>
               <hr>
               <h3>Send message to:</h3>
               <div class="row">
