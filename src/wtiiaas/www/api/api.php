@@ -59,7 +59,11 @@ if (isset($query) && !empty($query)) {
 
   <query action=\"getTimeWithFormat\" type=\"premium\">
     <description>Get the time with a custom format. Simply add a `format' attribute to your query and it will be appended after the `date' GNU command.<description>
-    <example><query action=\"getTimeWithFormat\" format=\"%m-%d-%y\" /></example>
+    <example>
+    <![CDATA[
+      <query action=\"getTimeWithFormat\" format=\"%m-%d-%y\" />
+    ]]>
+  </example>
   </query>
 
   <query action=\"\"></query>

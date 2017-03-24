@@ -77,11 +77,39 @@ include_once '../utils/utils.php';
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">Request a quote
-            <small>Our lovely marketing team promises not to sell your email to spammers!</small>
+            <small>Our lovely marketing team promises not to sell your contact information to spammers!</small>
           </h1>
         </div>
       </div>
-      <h4>To request a quote, please email <i><u>shore.christia@wtiiaas.csg</u></i>. She will make sure to assist your business needs.</h4>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Plans</th>
+            <th>Pricing</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Demo</td>
+            <td>0$ /month</td>
+            <td>With this plan, you can test the free API live form our website!</td>
+          </tr>
+          <tr>
+            <td>Free</td>
+            <td>3999$ /month</td>
+            <td>This allows you to access our super reliable time API.</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>5999$ /month</td>
+            <td>At this low, low price, this API is basically a steal!</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h4>To request a quote for your company or organisation, please email <i><u>shore.christia@wtiiaas.csg</u></i>. She will make sure to assist your business needs.</h4>
       <br />
       <br />
     </div>
