@@ -63,6 +63,9 @@ RUN chmod 700 /root/start.sh
 RUN chmod 700 /root/setupmysql.sh
 RUN chmod 700 /root/httpd.sh
 
+#HACK PLZ WORK
+ADD ./files/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+
 
 # Start main execution loop
 EXPOSE 80
