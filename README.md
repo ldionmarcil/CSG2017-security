@@ -129,9 +129,13 @@ One of the ways to get to the intranet
 
 
 * Instructions
-Camarades, l'heure est grave. Les écrits du camarade Mao s'avèrent véridique: l'impérialisme de l'Ouest prend notre patrie en otage! Voilà pourquoi nous avons créés une unité super-méga-secrète qui nous permettera de partir en cyber-guerre contre ces américains assoiffés de profit! Ces jeunes programmeurs milliardaires de 20 ans causent un embarras incomensurable à la patrie, nous nous devons de lutter!
+Comrades, the time has come.
+Comrade Mao’s writings have proven true: Western imperialism is taking our country hostage! The 20-year-old millionaire programmers heading these startups are causing an immeasurable embarrassment to the homeland because of their sense of innovation and speedy development of revolutionary products. We see ourselves forced to create a super-mega-secret unit that will allow us to go to cyber-war with these profit thirsty imperialist Americans!
+Your mission is to infiltrate the servers of one of these American startups and exfiltrate specific information. The information will then be relayed to the politburo of the Central Committee of the Communist Party in order to obtain an economic advantage. 
+Rumor has it that a kiddie script exploited the site a few months ago and that a password dump is available online.
+Your target: http://wtiiaas.csgames:YOUR_TEAMS_PORT/  (Written on your team’s credential sheet)
 
-Votre mission est de vous infiltrer dans le parc informatique d'une startup « high-tech » américaine et d'exfiltrer un maximum d'information. Cette informatoin sera ensuite relayée au politburo du Comité central du parti Communiste.
+In solidarity,
 
 Vos tâches:
 - Obtenir la liste complète des employés
