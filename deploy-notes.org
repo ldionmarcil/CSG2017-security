@@ -1,0 +1,5 @@
+* Docker
+1. sudo docker build -t wtiiaas .
+2. sudo docker create wtiiaas
+3. sudo docker start {HASH_HERE}
+4. sudo docker exec -it {HASH_HERE} bash
